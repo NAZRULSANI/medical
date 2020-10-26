@@ -321,3 +321,250 @@ function CommonDisease({ navigation }) {
     </ImageBackground>
   );
 }
+
+function Prescription({ navigation }) {
+  return (
+    <ImageBackground
+      style={{ flex: 1, width: "100%" }}
+      source={require("./app/images/background.jpg")}
+    >
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 50,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 50,
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          Prescription
+        </Text>
+        <Form>
+          <Textarea
+            rowSpan={5}
+            bordered
+            placeholder="Enter the prescription"
+            style={{ borderColor: "black", width: 300 }}
+          />
+
+          <Button
+            block
+            iconLeft
+            style={{ marginHorizontal: 50, marginTop: 20 }}
+            success
+            onPress={() => Toast.show("Prescription Submitted!")}
+          >
+            <Text>Submit</Text>
+          </Button>
+        </Form>
+        <Button
+          rounded
+          block
+          large
+          iconLeft
+          style={{ marginTop: 100, marginHorizontal: 50 }}
+          info
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text>Home</Text>
+        </Button>
+      </View>
+    </ImageBackground>
+  );
+}
+
+function SetAlert({ navigation }) {
+  return (
+    <ImageBackground
+      style={{ flex: 1, width: "100%" }}
+      source={require("./app/images/background.jpg")}
+    >
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 50,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 50,
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          Set Alert
+        </Text>
+        <Text
+          style={{ paddingHorizontal: 20, marginTop: 50, marginBottom: 20 }}
+        >
+          Pick a suitable time
+        </Text>
+
+        <DatePicker
+          style={{ width: 200 }}
+          date="2020-10-23"
+          mode="date"
+          placeholder="select date"
+          format="YYYY-MM-DD"
+          confirmBtnText="Confirm"
+          cancelBtnText="Cancel"
+        />
+        <Button
+          block
+          large
+          style={{ marginTop: 20, marginHorizontal: 100 }}
+          success
+          onPress={() => Toast.show("Alert Set!")}
+        >
+          <Text>Set</Text>
+        </Button>
+        <Button
+          rounded
+          block
+          large
+          iconLeft
+          style={{ marginTop: 100, marginHorizontal: 50 }}
+          info
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text>Home</Text>
+        </Button>
+      </View>
+    </ImageBackground>
+  );
+}
+
+function Medication({ navigation }) {
+  return (
+    <ImageBackground
+      style={{ flex: 1, width: "100%" }}
+      source={require("./app/images/background.jpg")}
+    >
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 50,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 50,
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          Medication
+        </Text>
+        <Button
+          block
+          large
+          style={{ marginTop: 20, marginHorizontal: 30 }}
+          danger
+          rounded
+          onPress={() => navigation.navigate("Prescription")}
+        >
+          <Text>Prescription</Text>
+        </Button>
+        <Button
+          block
+          large
+          style={{ marginTop: 20, marginHorizontal: 30 }}
+          danger
+          rounded
+          onPress={() => navigation.navigate("SetAlert")}
+        >
+          <Text>Set Alert</Text>
+        </Button>
+        <Button
+          rounded
+          block
+          large
+          iconLeft
+          style={{ marginTop: 100, marginHorizontal: 50 }}
+          info
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text>Home</Text>
+        </Button>
+      </View>
+    </ImageBackground>
+  );
+}
+
+function FAQs({ navigation }) {
+  return (
+    <ImageBackground
+      style={{ flex: 1, width: "100%" }}
+      source={require("./app/images/background.jpg")}
+    >
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: 20,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 50,
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          FAQs
+        </Text>
+        <View style={{ paddingHorizontal: 20, marginTop: 30 }}>
+          <Text
+            style={{
+              fontWeight: "bold",
+            }}
+          >
+            Q: What is coronavirus disease 2019 (COVID-19)?
+          </Text>
+          <Text>
+            Coronavirus disease 2019 (COVID-19) is a respiratory illness that
+            can spread from person to person. CDC has information on COVID-19
+            symptoms and caring for yourself and others. COVID-19 is a new
+            disease, caused by a novel (or new) coronavirus that has not
+            previously been seen in humans.
+          </Text>
+        </View>
+        <View style={{ paddingHorizontal: 20, marginTop: 30 }}>
+          <Text
+            style={{
+              fontWeight: "bold",
+            }}
+          >
+            Q: What is the FDA doing to respond to the COVID-19 pandemic?{" "}
+          </Text>
+          <Text>
+            The FDA, along with other federal, state, and local agencies and
+            public health officials across the country and internationally,
+            plays a critical role in protecting public health during the
+            COVID-19 pandemic. FDA staff are working around the clock to support
+            development of medical countermeasures and are providing regulatory
+            advice, guidance, and technical assistance.
+          </Text>
+        </View>
+        <Button
+          rounded
+          block
+          large
+          iconLeft
+          style={{ marginTop: 100, marginHorizontal: 50 }}
+          info
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text>Home</Text>
+        </Button>
+      </View>
+    </ImageBackground>
+  );
+}
